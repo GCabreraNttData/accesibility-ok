@@ -1,0 +1,122 @@
+.skip-link {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+.skip-link:focus {
+    position: static;
+    width: auto;
+    height: auto;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 30px;
+    padding: 0 15px;
+}
+header img {
+    margin: 0;
+    border-radius: 50%;
+}
+.site-name {
+    font-size: 24px;
+    font-weight: bold;
+}
+.content {
+    flex: 1;
+}
+.carousel-inner h1 {
+    position: absolute;
+    z-index: 2;
+    color: #fff;
+    text-shadow: 0 1px 3px #0005;
+    top: 30%;
+    right: 0;
+    font-size: 5vw;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+section {
+    margin: 0;
+    padding: 50px 0px;
+}
+#quienes-somos, #contacto {
+    background: #fff;
+}
+#quienes-somos img {
+    max-width: 100%;
+}
+form {
+    text-align: left;
+}
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+.carousel-indicators button:focus {
+    outline: 2px solid green;
+}
+
+.card {
+    margin: 0 0 30px;
+}
+
+#video-description {
+    background: #e7eef8;
+}
+
+.video-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.video-container video {
+    width:100%;
+}
+
+
+@media (max-width:1024px) {
+
+
+}
+
+@media (max-width:768px) {
+
+    .carousel-inner h1 {
+        top: 28%;
+    }
+
+    .site-name {
+        font-size: 18px;
+    }
+    
+}
+
+@media (max-width:767px) {
+
+    .carousel-inner h1 {
+        font-size: 6vw;
+    }
+    
+}
+
+@media (max-width:480px) {
+
+    .carousel-inner h1 {
+        font-size: 7vw;
+    }
+    
+}
