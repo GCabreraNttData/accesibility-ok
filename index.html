@@ -199,44 +199,54 @@
                     <input id="edad" type="number" class="form-control" placeholder="Edad">
                 </div>
                 <div class="mb-3">
-                    <label for="education" class="form-label">Educación:</label>
-                    <select
-                        id="education"
-                        name="education"
-                        required
-                        aria-describedby="educationHelp"
-                        aria-required="true"
-                    >
-                        <!-- Placeholder: not selectable as a valid value -->
-                        <option value="" disabled selected hidden>Seleccione una opción...</option>
+                    <label for="education" class="form-label">Tipo de formación</label>
 
-                        <!-- Grouping helps users (and AT) scan similar options -->
-                        <optgroup label="Enseñanza obligatoria y postobligatoria">
+                    <!-- Help text: referenced by aria-describedby -->
+                    <div id="educationHelp" class="form-text">Elija la opción que mejor describa su formación académica.</div>
+
+                    <!-- Accessible select with Bootstrap 5 .form-select -->
+                    <select
+                    id="education"
+                    name="education"
+                    class="form-select"
+                    required
+                    aria-describedby="educationHelp"
+                    aria-required="true"
+                    >
+                    <!-- Placeholder: not a valid value -->
+                    <option value="" disabled selected hidden>Seleccione una opción...</option>
+
+                    <optgroup label="Enseñanza obligatoria y postobligatoria">
                         <option value="educacion-infantil">Educación Infantil</option>
                         <option value="educacion-primaria">Educación Primaria</option>
                         <option value="eso">Educación Secundaria Obligatoria (ESO)</option>
                         <option value="bachillerato">Bachillerato</option>
-                        </optgroup>
+                    </optgroup>
 
-                        <optgroup label="Formación Profesional">
+                    <optgroup label="Formación Profesional">
                         <option value="fp-basica">Formación Profesional Básica (FPB)</option>
                         <option value="fp-grado-medio">Ciclo Formativo de Grado Medio</option>
                         <option value="fp-grado-superior">Ciclo Formativo de Grado Superior</option>
                         <option value="certificado-profesionalidad">Certificado de Profesionalidad</option>
-                        </optgroup>
+                    </optgroup>
 
-                        <optgroup label="Enseñanza universitaria">
+                    <optgroup label="Enseñanza universitaria">
                         <option value="grado-universitario">Grado universitario</option>
                         <option value="master-universitario">Máster universitario</option>
                         <option value="doctorado">Doctorado</option>
-                        </optgroup>
+                    </optgroup>
 
-                        <optgroup label="Enseñanzas especializadas">
+                    <optgroup label="Enseñanzas especializadas">
                         <option value="ensenanzas-artisticas">Enseñanzas Artísticas</option>
                         <option value="ensenanzas-deportivas">Enseñanzas Deportivas</option>
                         <option value="otras-formaciones">Otras formaciones</option>
-                        </optgroup>
+                    </optgroup>
                     </select>
+
+                    <!-- Bootstrap invalid feedback (hidden by default) -->
+                    <div id="educationError" class="invalid-feedback">
+                    Por favor, seleccione su tipo de formación.
+                    </div>
                 </div>
                 <div class="mb-3">
                     <label for="mensaje" class="form-label">Mensaje:</label>
