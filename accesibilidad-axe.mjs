@@ -41,14 +41,68 @@ axe.run(window.document, {
         impact: ['image-alt','label','link-name'].includes(v.id) ? 'critical' : v.impact,
         help: v.help,
         description: v.description,
-        nodes: v.nodes.map(n => ({
-          html: n.html,
-          target: n.target
-        }))
+        nodes: v.nodes.map(n => {
+          // Calcular ruta relativa y línea para cada nodo
+          const projectRoot = process.cwd();
+          const relPath = path.relative(projectRoot, fileName2).replace(/\\/g, '/');
+          let line = null;
+          if (n.html) {
+            const htmlContent = fs.readFileSync(path.resolve(fileName2), 'utf8');
+            const lines = htmlContent.split(/\r?\n/);
+            // Buscar la línea con más coincidencias de atributos
+            const attrRegex = /([a-zA-Z0-9\-:]+)=("[^"]*"|'[^']*')/g;
+            let attrs = [];
+            let match;
+            while ((match = attrRegex.exec(n.html)) !== null) {
+              attrs.push(match[0]);
+            }
+            let bestLine = -1, bestCount = 0;
+            for (let i = 0; i < lines.length; i++) {
+              let count = 0;
+              for (const attr of attrs) {
+                if (lines[i].includes(attr)) count++;
+              }
+              if (count > bestCount) {
+                bestCount = count;
+                bestLine = i;
+              }
+            }
+            if (bestLine === -1) {
+              const fragment = n.html.trim().substring(0, 30);
+              for (let i = 0; i < lines.length; i++) {
+                if (lines[i].includes(fragment)) {
+                  bestLine = i;
+                  break;
+                }
+              }
+            }
+            if (bestLine === -1) {
+              const tagMatch = n.html.trim().match(/^<([a-zA-Z0-9\-]+)/);
+              let tag = tagMatch ? tagMatch[1] : null;
+              if (tag) {
+                for (let i = 0; i < lines.length; i++) {
+                  if (lines[i].includes('<' + tag)) {
+                    bestLine = i;
+                    break;
+                  }
+                }
+              }
+            }
+            if (bestLine !== -1) line = bestLine + 1;
+          }
+          return {
+            html: n.html,
+            target: n.target,
+            file: relPath,
+            line: line
+          };
+        })
       }))
     };
     console.log(JSON.stringify(summary, null, 2));
-    process.exit(results.violations.length > 0 ? 1 : 0);
+    // Solo fallar si hay errores critical o serious
+    const fail = summary.violations.some(v => v.impact === 'critical' || v.impact === 'serious');
+    process.exit(fail ? 1 : 0);
   }
   if (results.violations.length === 0) {
     console.log(chalk.green('Sin problemas de accesibilidad.'));

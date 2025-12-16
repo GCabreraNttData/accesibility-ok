@@ -17,5 +17,17 @@ jobs:
           node-version: '18'
       - name: Install dependencies
         run: npm install
-      - name: Run accessibility test
-        run: node accesibilidad-axe.mjs index.html --json
+      - name: Run accessibility test on all markup files
+        run: |
+          shopt -s globstar nullglob
+          for file in **/*.{html,htm,jsx,tsx}; do
+            echo "Testing $file"
+            node accesibilidad-axe.mjs "$file" --json || exit 1
+          done
+      - name: Generate Markdown report
+        run: node generate-report.js
+      - name: Upload accessibility report artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: accessibility-report
+          path: accesibility-report.md
