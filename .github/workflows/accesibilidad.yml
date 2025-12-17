@@ -25,6 +25,7 @@ jobs:
             node accesibilidad-axe.mjs "$file" --json || exit 1
           done
       - name: Generate Markdown report
+        if: always()
         run: node generate-report.js
       - name: Upload accessibility report artifact
         if: always()
