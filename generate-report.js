@@ -1,6 +1,6 @@
 import fs from 'fs';
 
-const data = JSON.parse(fs.readFileSync('accesibilidad-report.json', 'utf8'));
+const data = JSON.parse(fs.readFileSync('accesibility-report.json', 'utf8'));
 
 let md = `# Accessibility Report for ${data.file}\n\n`;
 
@@ -17,5 +17,5 @@ for (const v of data.violations) {
   md += '\n';
 }
 
-fs.writeFileSync('accesibilidad-report.md', md);
-console.log('Markdown report generated: accesibilidad-report.md');
+fs.writeFileSync('accesibility-report.md', md);
+console.log('Markdown report generated: accesibility-report.md');
