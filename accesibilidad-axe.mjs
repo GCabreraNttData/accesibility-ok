@@ -99,6 +99,7 @@ axe.run(window.document, {
         })
       }))
     };
+    fs.writeFileSync('accesibility-report.json', JSON.stringify(summary, null, 2));
     console.log(JSON.stringify(summary, null, 2));
     // Solo fallar si hay errores critical o serious
     const fail = summary.violations.some(v => v.impact === 'critical' || v.impact === 'serious');
