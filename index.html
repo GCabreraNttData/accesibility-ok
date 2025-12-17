@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <title>Accesibilidad Web</title>
     <link rel="icon" type="image/x-icon" href="./favicon.ico">
     <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
@@ -17,7 +17,7 @@
         <div class="container mx-0 mw-100">
             <div class="row">
                 <div class="col-12 col-sm-6 d-flex align-items-center gap-3">
-                    <img src="./img/logo-accesibility.png"  height="50">
+                    <img src="./img/logo-accesibility.png" alt="Logo Accesibilidad" height="50">
                     <div class="site-name">Accesibilidad Web</div>
                 </div>
                 <div class="col-12 col-sm-6 d-flex align-items-center justify-content-end gap-3">
@@ -38,7 +38,7 @@
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
             <div class="carousel-inner">
-                <h3>La accesibilidad web<br/>es el futuro</h3>
+                <h1>La accesibilidad web<br/>es el futuro</h1>
                 <div class="carousel-item active">
                     <img src="./img/slider1.jpg" class="d-block w-100" alt="Descripción de la primera imagen">
                 </div>
@@ -182,12 +182,12 @@
         
         <section id="contacto" class="text-center">
             <div class="container py-5 content">
-                <h3>Contacto</h3>
+                <h1>Contacto</h1>
                 <p>Envíanos tu consulta y te responderemos pronto.</p>
                 <form class="mx-auto" style="max-width: 500px;">
                     <hr/>
                     <div class="mb-3">
-                        <label for="nombre" class="form-label"></label>
+                        <label for="nombre" class="form-label">Nombre:</label>
                         <input id="nombre" type="text" class="form-control" placeholder="Nombre">
                     </div>
                     <div class="mb-3">
@@ -195,11 +195,11 @@
                         <input id="email" type="email" class="form-control" placeholder="Email">
                     </div>
                     <div class="mb-3">
-                        <label for="edad" class="form-label"></label>
+                        <label for="edad" class="form-label">Edad:</label>
                         <input id="edad" type="number" class="form-control" placeholder="Edad">
                     </div>
                     <div class="mb-3">
-                        <label for="education" class="form-label"></label>
+                        <label for="education" class="form-label">Tipo de formación</label>
 
                         <!-- Help text: referenced by aria-describedby -->
                         <div id="educationHelp" class="form-text">Elija la opción que mejor describa su formación académica.</div>
