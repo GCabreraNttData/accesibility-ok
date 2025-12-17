@@ -27,6 +27,7 @@ jobs:
       - name: Generate Markdown report
         run: node generate-report.js
       - name: Upload accessibility report artifact
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: accessibility-report
