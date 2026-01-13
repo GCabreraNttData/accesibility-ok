@@ -12,7 +12,7 @@
 <body class="bg-light">
     <header class="bg-dark text-white text-center py-3">
 
-                <a href="#quienes-somos" class="skip-link">Saltar al contenido</a>
+                <a href="#porque" class="skip-link">Saltar al contenido</a>
 
                 <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Menú principal">
                     <div class="container mx-0 mw-100">
@@ -91,7 +91,7 @@
                                 <h3 class="card-title">Falta de "Skip to content"</h3>
                                 <p class="card-text">"Skip to content" es un enlace o botón que se añade antes de la navegación o menú de una página web.</p>
                                 <p class="card-text">Se visualiza solo en estado "focus" y su propósito es evitar que los usuarios tengan que navegar por todo el menú para llegar al contenido principal.</p>
-                                <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Howto/Design_and_accessibility/HTML_features_for_accessibility#skip_links" class="btn btn-primary">Más información</a>
+                                <a target="_blank" aria-label="Mas información sobre Skip to content" href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Howto/Design_and_accessibility/HTML_features_for_accessibility#skip_links" class="btn btn-primary">Más información</a>
                             </div>
                         </div>
                     </div>
@@ -101,7 +101,7 @@
                                 <h3 class="card-title">Jerarquía de encabezados inconsistente o inexistente</h3>
                                 <p class="card-text">Uso de jerarquía de encabezados inconsistente o inexistente hace que la navegación sea confusa.</p>
                                 <p class="card-text">Intentar mantener siempre una estructura lógica de h1 → h2 → h3, no saltarse niveles y usar encabezados para dividir secciones de forma coherente.</p>
-                                <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements#accessibility" class="btn btn-primary">Más información</a>
+                                <a target="_blank" aria-label="Mas información sobre jerarquía de encabezados" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements#accessibility" class="btn btn-primary">Más información</a>
                             </div>
                         </div>
                     </div>
@@ -112,7 +112,7 @@
                                 <p class="card-text">Falta de contraste suficiente entre el color del primer plano y el del fondo.</p>
                                 <p class="card-text">Asegurarse de que el contraste entre el texto y el fondo sea suficiente para que el contenido sea legible para personas con discapacidades visuales.</p>
                                 <p class="card-text">Aplicar relaciones de contraste según WCAG (mínimo 4.5:1 para texto normal, 3:1 para texto grande).</p>
-                                <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast" class="btn btn-primary">Más información</a>
+                                <a target="_blank" aria-label="Mas información sobre contraste" href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast" class="btn btn-primary">Más información</a>
                             </div>
                         </div>
                     </div>
@@ -122,7 +122,7 @@
                                 <h3 class="card-title">Uso de texto alternativo inapropiado o poco claro para las imágenes</h3>
                                 <p class="card-text">Texto alternativo inexistente, irrelevante o confuso que no describe la función o el contenido de la imagen.</p>
                                 <p class="card-text">Escribir atributos "alt" descriptivos y concisos que describan la imagen (ej: alt="Mujer paseando perro en la ciudad" en vez de alt="Seccion Nuestros Valores") omitir el alt en imágenes puramente decorativas o abstractas (alt="").</p>
-                                <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/alt" class="btn btn-primary">Más información</a>
+                                <a target="_blank" aria-label="Mas información sobre texto alternativo" href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/alt" class="btn btn-primary">Más información</a>
                             </div> 
                         </div>
                     </div>
@@ -132,7 +132,7 @@
                                 <h3 class="card-title">Falta de navegación por teclado</h3>
                                 <p class="card-text">Elementos no enfocables, orden de tabulación ilógico o ausencia de indicación de foco visible.</p>
                                 <p class="card-text">Asegurar que todos los controles interactivos sean accesibles por teclado, mantener un orden de tabulación lógico y proporcionar estilos de focus visibles.</p>
-                                <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Keyboard" class="btn btn-primary">Más información</a>
+                                <a  target="_blank" aria-label="Mas información sobre navegación por teclado" href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Keyboard" class="btn btn-primary">Más información</a>
                             </div>
                         </div>
                     </div>
@@ -161,7 +161,7 @@
                                 <p class="card-text">Vídeos sin subtítulos o transcripciones pueden excluir a usuarios con discapacidades auditivas.</p>
                                 <p class="card-text">Proporciona subtítulos y transcripciones para todo contenido multimedia.</p>
                                 <p class="card-text">Puedes utilizar la etiquetas <track /> para añadir subtítulos a los vídeos mediate archivos vtt.</p>
-                                <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebVTT_API/Web_Video_Text_Tracks_Format" target="_blank" class="btn btn-primary">Más información</a>
+                                <a  target="_blank" aria-label="Más información sobre subtítulos y transcripciones en vídeos" href="https://developer.mozilla.org/en-US/docs/Web/API/WebVTT_API/Web_Video_Text_Tracks_Format" class="btn btn-primary">Más información</a>
                             </div>
                         </div>
                     </div>
@@ -171,7 +171,7 @@
                                 <h3 class="card-title">Errores en Formularios</h3>
                                 <p class="card-text">Formularios sin "labels" claros dificultan que los usuarios de lectores de pantalla comprendan el propósito de los campos del formulario.</p>
                                 <p class="card-text">Asegúrate de añadir etiquetas <label></label> claras asociadas a cada input o campo del formulario.</p>
-                                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/label#accessibility" target="_blank" class="btn btn-primary">Más información</a>
+                                <a target="_blank" aria-label="Mas información sobre labels" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/label#accessibility" class="btn btn-primary">Más información</a>
                             </div>
                         </div>
                     </div>
