@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,22 +12,35 @@
 <body class="bg-light">
     <header class="bg-dark text-white text-center py-3">
 
-        <a href="#quienes-somos" class="skip-link">Saltar al contenido</a>
+                <a href="#quienes-somos" class="skip-link">Saltar al contenido</a>
 
-        <div class="container mx-0 mw-100">
-            <div class="row">
-                <div class="col-12 col-sm-6 d-flex align-items-center gap-3">
-                    <img src="./img/logo-accesibility.png" alt="Logo Accesibilidad" height="50">
-                    <div class="site-name">Accesibilidad Web</div>
-                </div>
-                <div class="col-12 col-sm-6 d-flex align-items-center justify-content-end gap-3">
-                    <nav>
-                        <a href="#quienes-somos" class="text-white mx-3">¿Por qué?</a>
-                        <a href="#contacto" class="text-white mx-3">Contacto</a>
-                    </nav>
-                </div>
-            </div>
-        </div>
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Menú principal">
+                    <div class="container mx-0 mw-100">
+                        <a class="navbar-brand d-flex align-items-center gap-3" href="#">
+                            <img src="./img/logo-accesibility.png" alt="Logo Accesibilidad" height="50">
+                            <span class="site-name">Accesibilidad Web</span>
+                        </a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Mostrar menú">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse justify-content-end" id="mainNavbar">
+                            <ul class="navbar-nav mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a href="#porque" class="nav-link text-white mx-3">¿Por qué?</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#errores-comunes" class="nav-link text-white mx-3">Errores comunes</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#video-description" class="nav-link text-white mx-3">Descripción de audio/vídeo</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#contacto" class="nav-link text-white mx-3">Contacto</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
 
     </header>
     <main>
@@ -52,7 +65,7 @@
         </div>
     
     
-        <section id="quienes-somos">
+        <section id="porque">
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-sm-4 pt-3">
@@ -75,8 +88,19 @@
                     <div class="col-sm-6">
                         <div class="card">
                             <div class="card-body">
+                                <h5 class="card-title">Falta de "Skip to content"</h5>
+                                <p class="card-text">"Skip to content" es un enlace o botón que se añade antes de la navegación o menú de una página web.</p>
+                                <p class="card-text">Se visualiza solo en estado "focus" y su propósito es evitar que los usuarios tengan que navegar por todo el menú para llegar al contenido principal.</p>
+                                <a href="#" class="btn btn-primary">Más información</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
                                 <h5 class="card-title">Jerarquía de encabezados inconsistente o inexistente</h5>
-                                <p class="card-text">Uso de jerarquía de encabezados inconsistente o faltante, lo que hace que la navegación sea confusa.</p>
+                                <p class="card-text">Uso de jerarquía de encabezados inconsistente o inexistente hace que la navegación sea confusa.</p>
+                                <p class="card-text">Intentar mantener siempre una estructura lógica de h1 → h2 → h3, no saltarse niveles y usar encabezados para dividir secciones de forma coherente.</p>
                                 <a href="#" class="btn btn-primary">Más información</a>
                             </div>
                         </div>
@@ -86,6 +110,8 @@
                             <div class="card-body">
                                 <h5 class="card-title">Falta de contraste suficiente</h5>
                                 <p class="card-text">Falta de contraste suficiente entre el color del primer plano y el del fondo.</p>
+                                <p class="card-text">Asegurarse de que el contraste entre el texto y el fondo sea suficiente para que el contenido sea legible para personas con discapacidades visuales.</p>
+                                <p class="card-text">Aplicar relaciones de contraste según WCAG (mínimo 4.5:1 para texto normal, 3:1 para texto grande).</p>
                                 <a href="#" class="btn btn-primary">Más información</a>
                             </div>
                         </div>
@@ -93,8 +119,19 @@
                     <div class="col-sm-6">
                         <div class="card">
                             <div class="card-body">
-                                <h5 class="card-title">Jerarquía de encabezados inconsistente o inexistente</h5>
-                                <p class="card-text">Uso de jerarquía de encabezados inconsistente o faltante, lo que hace que la navegación sea confusa.</p>
+                                <h5 class="card-title">Uso de texto alternativo inapropiado o poco claro para las imágenes</h5>
+                                <p class="card-text">Texto alternativo inexistente, irrelevante o confuso que no describe la función o el contenido de la imagen.</p>
+                                <p class="card-text">Escribir atributos "alt" descriptivos y concisos que describan la imagen (ej: alt="Mujer paseando perro en la ciudad" en vez de alt="Seccion Nuestros Valores") omitir el alt en imágenes puramente decorativas o abstractas (alt="").</p>
+                                <a href="#" class="btn btn-primary">Más información</a>
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Falta de navegación por teclado</h5>
+                                <p class="card-text">Elementos no enfocables, orden de tabulación ilógico o ausencia de indicación de foco visible.</p>
+                                <p class="card-text">Asegurar que todos los controles interactivos sean accesibles por teclado, mantener un orden de tabulación lógico y proporcionar estilos de focus visibles.</p>
                                 <a href="#" class="btn btn-primary">Más información</a>
                             </div>
                         </div>
@@ -102,8 +139,9 @@
                     <div class="col-sm-6">
                         <div class="card">
                             <div class="card-body">
-                                <h5 class="card-title">Falta de contraste suficiente</h5>
-                                <p class="card-text">Falta de contraste suficiente entre el color del primer plano y el del fondo.</p>
+                                <h5 class="card-title">Uso de enlaces no descriptivos que no transmiten su propósito ni destino</h5>
+                                <p class="card-text">Texto de enlaces como "haz clic aquí" o "leer más" sin contexto.</p>
+                                <p class="card-text">Usar textos de enlace descriptivos que indiquen la acción o destino (por ejemplo, "Descargar informe anual (PDF)") y complementar con title o aria-label si es necesario.</p>
                                 <a href="#" class="btn btn-primary">Más información</a>
                             </div>
                         </div>
@@ -111,8 +149,9 @@
                     <div class="col-sm-6">
                         <div class="card">
                             <div class="card-body">
-                                <h5 class="card-title">Jerarquía de encabezados inconsistente o inexistente</h5>
-                                <p class="card-text">Uso de jerarquía de encabezados inconsistente o faltante, lo que hace que la navegación sea confusa.</p>
+                                <h5 class="card-title">Diseños de página no responsivos</h5>
+                                <p class="card-text">Los diseños que no se adaptan a diferentes dispositivos pueden ser inaccesibles para usuarios de móviles.</p>
+                                <p class="card-text">Implementa un diseño responsivo que garantice que los contenidos sean accesibles en todos los tamaños de pantalla.</p>
                                 <a href="#" class="btn btn-primary">Más información</a>
                             </div>
                         </div>
@@ -120,44 +159,31 @@
                     <div class="col-sm-6">
                         <div class="card">
                             <div class="card-body">
-                                <h5 class="card-title">Falta de contraste suficiente</h5>
-                                <p class="card-text">Falta de contraste suficiente entre el color del primer plano y el del fondo.</p>
-                                <a href="#" class="btn btn-primary">Más información</a>
+                                <h5 class="card-title">Contenido Multimedia No Accesible</h5>
+                                <p class="card-text">Vídeos sin subtítulos o transcripciones pueden excluir a usuarios con discapacidades auditivas.</p>
+                                <p class="card-text">Proporciona subtítulos y transcripciones para todo contenido multimedia.</p>
+                                <p class="card-text">Puedes utilizar la etiquetas <track /> para añadir subtítulos a los vídeos mediate archivos vtt.</p>
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebVTT_API/Web_Video_Text_Tracks_Format" target="_blank" class="btn btn-primary">Más información</a>
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="card">
                             <div class="card-body">
-                                <h5 class="card-title">Jerarquía de encabezados inconsistente o inexistente</h5>
-                                <p class="card-text">Uso de jerarquía de encabezados inconsistente o faltante, lo que hace que la navegación sea confusa.</p>
-                                <a href="#" class="btn btn-primary">Más información</a>
+                                <h5 class="card-title">Errores en Formularios</h5>
+                                <p class="card-text">Formularios sin "labels" claros dificultan que los usuarios de lectores de pantalla comprendan el propósito de los campos del formulario.</p>
+                                <p class="card-text">Asegúrate de añadir etiquetas <label></label> claras asociadas a cada input o campo del formulario.</p>
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/label#accessibility" target="_blank" class="btn btn-primary">Más información</a>
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="card">
                             <div class="card-body">
-                                <h5 class="card-title">Falta de contraste suficiente</h5>
-                                <p class="card-text">Falta de contraste suficiente entre el color del primer plano y el del fondo.</p>
-                                <a href="https://www.google.com" class="btn btn-primary">Más información</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Jerarquía de encabezados inconsistente o inexistente</h5>
-                                <p class="card-text">Uso de jerarquía de encabezados inconsistente o faltante, lo que hace que la navegación sea confusa.</p>
-                                <a href="#" class="btn btn-primary">Más información</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Falta de contraste suficiente</h5>
-                                <p class="card-text">Falta de contraste suficiente entre el color del primer plano y el del fondo.</p>
+                                <h5 class="card-title">Incrustar documentos no accesibles</h5>
+                                <p class="card-text">Adjuntar o enlazar documentos no accesibles para lectores de pantalla u otras herramientas de asistencia (PDFs o documentos sin estructura semántica, sin texto seleccionable o sin etiquetas).</p>
+                                <p class="card-text">Asegúrate de que los documentos incrustados sean accesibles (PDF etiquetado, HTML), usar OCR cuando proceda.</p>
+                                <p class="card-text">Actualmente herramientas para generar pdf o documentos word ya cuentan con opciones para mejorar la accesibilidad.</p>
                                 <a href="#" class="btn btn-primary">Más información</a>
                             </div>
                         </div>
@@ -188,63 +214,53 @@
                     <hr/>
                     <div class="mb-3">
                         <label for="nombre" class="form-label">Nombre:</label>
-                        <input id="nombre" type="text" class="form-control" placeholder="Nombre">
+                        <input id="nombre" type="text" class="form-control" placeholder="Escribe tu nombre" required>
                     </div>
                     <div class="mb-3">
                         <label for="email" class="form-label">Email:</label>
-                        <input id="email" type="email" class="form-control" placeholder="Email">
+                        <input id="email" type="email" class="form-control" placeholder="Escribe tu email" required>
                     </div>
                     <div class="mb-3">
                         <label for="edad" class="form-label">Edad:</label>
-                        <input id="edad" type="number" class="form-control" placeholder="Edad">
+                        <input id="edad" type="number" class="form-control" placeholder="Escribe tu edad" required>
                     </div>
                     <div class="mb-3">
                         <label for="education" class="form-label">Tipo de formación</label>
-
-                        <!-- Help text: referenced by aria-describedby -->
                         <div id="educationHelp" class="form-text">Elija la opción que mejor describa su formación académica.</div>
-
-                        <!-- Accessible select with Bootstrap 5 .form-select -->
                         <select
-                        id="education"
-                        name="education"
-                        class="form-select"
-                        required
-
+                            id="education"
+                            name="education"
+                            class="form-select"
+                            required
+                            aria-describedby="educationHelp educationError"
+                            aria-invalid="false"
                         >
-                        <!-- Placeholder: not a valid value -->
-                        <option value="" disabled selected hidden>Seleccione una opción...</option>
-
-                        <optgroup >
-                            <option value="educacion-infantil">Educación Infantil</option>
-                            <option value="educacion-primaria">Educación Primaria</option>
-                            <option value="eso">Educación Secundaria Obligatoria (ESO)</option>
-                            <option value="bachillerato">Bachillerato</option>
-                        </optgroup>
-
-                        <optgroup label="Formación Profesional">
-                            <option value="fp-basica">Formación Profesional Básica (FPB)</option>
-                            <option value="fp-grado-medio">Ciclo Formativo de Grado Medio</option>
-                            <option value="fp-grado-superior">Ciclo Formativo de Grado Superior</option>
-                            <option value="certificado-profesionalidad">Certificado de Profesionalidad</option>
-                        </optgroup>
-
-                        <optgroup label="Enseñanza universitaria">
-                            <option value="grado-universitario">Grado universitario</option>
-                            <option value="master-universitario">Máster universitario</option>
-                            <option value="doctorado">Doctorado</option>
-                        </optgroup>
-
-                        <optgroup label="Enseñanzas especializadas">
-                            <option value="ensenanzas-artisticas">Enseñanzas Artísticas</option>
-                            <option value="ensenanzas-deportivas">Enseñanzas Deportivas</option>
-                            <option value="otras-formaciones">Otras formaciones</option>
-                        </optgroup>
+                            <option value="" disabled selected hidden>Seleccione una opción...</option>
+                            <optgroup>
+                                <option value="educacion-infantil">Educación Infantil</option>
+                                <option value="educacion-primaria">Educación Primaria</option>
+                                <option value="eso">Educación Secundaria Obligatoria (ESO)</option>
+                                <option value="bachillerato">Bachillerato</option>
+                            </optgroup>
+                            <optgroup label="Formación Profesional">
+                                <option value="fp-basica">Formación Profesional Básica (FPB)</option>
+                                <option value="fp-grado-medio">Ciclo Formativo de Grado Medio</option>
+                                <option value="fp-grado-superior">Ciclo Formativo de Grado Superior</option>
+                                <option value="certificado-profesionalidad">Certificado de Profesionalidad</option>
+                            </optgroup>
+                            <optgroup label="Enseñanza universitaria">
+                                <option value="grado-universitario">Grado universitario</option>
+                                <option value="master-universitario">Máster universitario</option>
+                                <option value="doctorado">Doctorado</option>
+                            </optgroup>
+                            <optgroup label="Enseñanzas especializadas">
+                                <option value="ensenanzas-artisticas">Enseñanzas Artísticas</option>
+                                <option value="ensenanzas-deportivas">Enseñanzas Deportivas</option>
+                                <option value="otras-formaciones">Otras formaciones</option>
+                            </optgroup>
                         </select>
-
-                        <!-- Bootstrap invalid feedback (hidden by default) -->
-                        <div id="educationError" class="invalid-feedback">
-                        Por favor, seleccione su tipo de formación.
+                        <div id="educationError" class="invalid-feedback" aria-live="polite">
+                            Por favor, seleccione su tipo de formación.
                         </div>
                     </div>
                     <div class="mb-3">

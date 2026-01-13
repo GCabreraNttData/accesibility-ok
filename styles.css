@@ -47,6 +47,9 @@ header img {
     width: 100%;
     text-align: center;
 }
+.carousel-item {
+    filter: brightness(0.4);
+}
 section {
     margin: 0;
     padding: 50px 0px;
