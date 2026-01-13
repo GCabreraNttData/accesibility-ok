@@ -19,6 +19,9 @@ body {
 a {
     color: #0e4ba5 !important;
 }
+.btn-primary {
+    color: #fff !important;
+}
 header {
     display: flex;
     flex-direction: row;
