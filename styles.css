@@ -17,7 +17,7 @@ body {
     min-height: 100vh;
 }
 a {
-    color: #0e4ba5;
+    color: #0e4ba5 !important;
 }
 header {
     display: flex;
