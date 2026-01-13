@@ -37,6 +37,7 @@ header img {
 .site-name {
     font-size: 24px;
     font-weight: bold;
+    color: #fff !important;
 }
 .navbar {
     width: 100%;
