@@ -32,6 +32,14 @@ header img {
     font-size: 24px;
     font-weight: bold;
 }
+.navbar {
+    width: 100%;
+}
+
+.navbar-toggler {
+    box-shadow: 0 0 0 2px #fff;
+    padding: 3px 8px;
+}
 .content {
     flex: 1;
 }
