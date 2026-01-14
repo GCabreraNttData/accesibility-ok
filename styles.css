@@ -5,6 +5,7 @@
     width: 1px;
     height: 1px;
     overflow: hidden;
+    color: #fff !important;
 }
 .skip-link:focus {
     position: static;
